@@ -1,0 +1,345 @@
+[
+    {
+        "label": "ui",
+        "importPath": "nicegui",
+        "description": "nicegui",
+        "isExtraImport": true,
+        "detail": "nicegui",
+        "documentation": {}
+    },
+    {
+        "label": "ui",
+        "importPath": "nicegui",
+        "description": "nicegui",
+        "isExtraImport": true,
+        "detail": "nicegui",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy",
+        "description": "taipy",
+        "isExtraImport": true,
+        "detail": "taipy",
+        "documentation": {}
+    },
+    {
+        "label": "Core",
+        "importPath": "taipy",
+        "description": "taipy",
+        "isExtraImport": true,
+        "detail": "taipy",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_file",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "qrcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "qrcode",
+        "description": "qrcode",
+        "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "StyledPilImage",
+        "importPath": "qrcode.image.styledpil",
+        "description": "qrcode.image.styledpil",
+        "isExtraImport": true,
+        "detail": "qrcode.image.styledpil",
+        "documentation": {}
+    },
+    {
+        "label": "GappedSquareModuleDrawer",
+        "importPath": "qrcode.image.styles.moduledrawers",
+        "description": "qrcode.image.styles.moduledrawers",
+        "isExtraImport": true,
+        "detail": "qrcode.image.styles.moduledrawers",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "notify",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main():\n    ui.label('Welcome to my NiceGUI application').classes(\n        'text-h3 text-center')\n    with ui.row().classes('w-full justify-center'):\n        ui.button('Click me!', on_click=lambda: ui.notify('Button clicked!'))\nif __name__ in {\"__main__\", \"__mp_main__\"}:\n    main()\n    ui.run(title='My Application', port=8082)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "serve_pdf",
+        "kind": 2,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "def serve_pdf():\n    # Ensure the file path is correct\n    return send_file(r'C:\\Users\\Solid\\OneDrive\\Documents\\GitHub\\AI_Claude_OpenSource\\pdf\\IHPUSA_COA.pdf', as_attachment=False)\n@app.route(\"/warning\")\ndef serve_warning():\n    return gui.get_page(\"warning\")\n# Create a Taipy Markdown page with the warning text\ndata = f\"\"\"\nThis page is meant to give access to the COA of the CBD offered and is subject to change without notice depending on the harvest season.\n### IHPUSA Product Warning QR Code",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "serve_warning",
+        "kind": 2,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "def serve_warning():\n    return gui.get_page(\"warning\")\n# Create a Taipy Markdown page with the warning text\ndata = f\"\"\"\nThis page is meant to give access to the COA of the CBD offered and is subject to change without notice depending on the harvest season.\n### IHPUSA Product Warning QR Code\nScan this QR code to view the product warning information.\n### Product Warning\n**WARNING:** For external use only.\n- Highly Flammable: Keep away from heat, sparks, electrical sources, fire, or flame.",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "def index():\n    return redirect(url_for(\"serve_nav\"))\n# Serve the navigation menu\n@app.route(\"/nav\")\ndef serve_nav():\n    return gui.get_page(\"nav\")\n# Run the Taipy GUI\nif __name__ == '__main__':\n    import threading\n    # Start Flask server in a separate thread",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "serve_nav",
+        "kind": 2,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "def serve_nav():\n    return gui.get_page(\"nav\")\n# Run the Taipy GUI\nif __name__ == '__main__':\n    import threading\n    # Start Flask server in a separate thread\n    threading.Thread(target=lambda: app.run(host=\"0.0.0.0\", port=5001)).start()\n    port = int(os.environ.get(\"PORT\", 5000))\n    gui.run(host=\"0.0.0.0\", port=port)",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "gui",
+        "kind": 5,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "gui = Gui(\"<|This Page is meant to give access to the COA of the CBD offered, and subject to change without notice depending on the harvest season.|>\")\nnav_menu = \"\"\"\n# Navigation Menu\n* [COA Page](/pdf)\n* [Warning/Directions Page](/warning)\n* [Business Opportunity/Survey](https://docs.google.com/forms/d/e/1FAIpQLSeFQwgFouHuj6qauAXjab5po0jKMM030eiOLi0gKuxtTtGUHw/viewform)\n\"\"\"\n# Make /nav the default page\n# Add the navigation menu to the GUI\ngui.add_page(\"nav\", nav_menu)",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "nav_menu",
+        "kind": 5,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "nav_menu = \"\"\"\n# Navigation Menu\n* [COA Page](/pdf)\n* [Warning/Directions Page](/warning)\n* [Business Opportunity/Survey](https://docs.google.com/forms/d/e/1FAIpQLSeFQwgFouHuj6qauAXjab5po0jKMM030eiOLi0gKuxtTtGUHw/viewform)\n\"\"\"\n# Make /nav the default page\n# Add the navigation menu to the GUI\ngui.add_page(\"nav\", nav_menu)\n# Define the Markdown content of the page",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_page",
+        "kind": 5,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "pdf_page = \"\"\"\n# COA Page can be gotten at link below\nYou can view the COA at the following link and download: [here](http://ai-claude-opensource.onrender.com/pdf/IHPUSA_COA.pdf).\n\"\"\"\n# Add a new page to the GUI\ngui.add_page(\"pdf\", pdf_page)\n# Create a Flask app to serve the PDF\napp = Flask(__name__)\nCORS(app)\n@app.route(\"/pdf\")",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\n@app.route(\"/pdf\")\ndef serve_pdf():\n    # Ensure the file path is correct\n    return send_file(r'C:\\Users\\Solid\\OneDrive\\Documents\\GitHub\\AI_Claude_OpenSource\\pdf\\IHPUSA_COA.pdf', as_attachment=False)\n@app.route(\"/warning\")\ndef serve_warning():\n    return gui.get_page(\"warning\")\n# Create a Taipy Markdown page with the warning text",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "BackEnd",
+        "description": "BackEnd",
+        "peekOfCode": "data = f\"\"\"\nThis page is meant to give access to the COA of the CBD offered and is subject to change without notice depending on the harvest season.\n### IHPUSA Product Warning QR Code\nScan this QR code to view the product warning information.\n### Product Warning\n**WARNING:** For external use only.\n- Highly Flammable: Keep away from heat, sparks, electrical sources, fire, or flame.\n- Avoid contact with eyes: It can cause serious eye irritation.\n- Inhalation hazard: May cause drowsiness and dizziness.\n- Do not ingest: Can cause serious gastric disturbances if taken internally.",
+        "detail": "BackEnd",
+        "documentation": {}
+    },
+    {
+        "label": "AppState",
+        "kind": 6,
+        "importPath": "BackEnd1-BU",
+        "description": "BackEnd1-BU",
+        "peekOfCode": "class AppState:\n    def __init__(self):\n        self.counter = 0\n        self.message = \"Hello from Taipy Backend!\"\n# Create callback functions\ndef increment_counter(state: State):\n    state.counter += 1\n    notify(state, 'success', f'Counter incremented to {state.counter}')\n# Define the page content\npage = \"\"\"",
+        "detail": "BackEnd1-BU",
+        "documentation": {}
+    },
+    {
+        "label": "increment_counter",
+        "kind": 2,
+        "importPath": "BackEnd1-BU",
+        "description": "BackEnd1-BU",
+        "peekOfCode": "def increment_counter(state: State):\n    state.counter += 1\n    notify(state, 'success', f'Counter incremented to {state.counter}')\n# Define the page content\npage = \"\"\"\n<|layout|columns=1 gap=30px|\n<|part|class_name=text-center|\n# {message}\nCurrent Count: {counter}\n<|button|on_action=increment_counter|text=\"Increment Counter\"|>",
+        "detail": "BackEnd1-BU",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 5,
+        "importPath": "BackEnd1-BU",
+        "description": "BackEnd1-BU",
+        "peekOfCode": "page = \"\"\"\n<|layout|columns=1 gap=30px|\n<|part|class_name=text-center|\n# {message}\nCurrent Count: {counter}\n<|button|on_action=increment_counter|text=\"Increment Counter\"|>\n|>\n|>\n\"\"\"\n# Initialize the state and GUI",
+        "detail": "BackEnd1-BU",
+        "documentation": {}
+    },
+    {
+        "label": "state",
+        "kind": 5,
+        "importPath": "BackEnd1-BU",
+        "description": "BackEnd1-BU",
+        "peekOfCode": "state = AppState()\ngui = Gui(page)\nif __name__ == '__main__':\n    Core().run()\n    gui.run(port=8086, title=\"Taipy Backend\")",
+        "detail": "BackEnd1-BU",
+        "documentation": {}
+    },
+    {
+        "label": "gui",
+        "kind": 5,
+        "importPath": "BackEnd1-BU",
+        "description": "BackEnd1-BU",
+        "peekOfCode": "gui = Gui(page)\nif __name__ == '__main__':\n    Core().run()\n    gui.run(port=8086, title=\"Taipy Backend\")",
+        "detail": "BackEnd1-BU",
+        "documentation": {}
+    },
+    {
+        "label": "data1",
+        "kind": 2,
+        "importPath": "BackEnd2-bu",
+        "description": "BackEnd2-bu",
+        "peekOfCode": "def data1():\n    return jsonify({\"message\": \"Data from backend - Route 1\"})\n@flask_app.route(\"/data2\", methods=['POST'])\ndef data2():\n    data = request.get_json()\n    name = data.get(\"name\", \"No Name Provided\")\n    return jsonify({\"message\": f\"Hello, {name}! - Route 2\"})\n@flask_app.route(\"/data3\", methods=['GET'])\ndef data3():\n    return jsonify({\"message\": \"Data from backend - Route 3\"})",
+        "detail": "BackEnd2-bu",
+        "documentation": {}
+    },
+    {
+        "label": "data2",
+        "kind": 2,
+        "importPath": "BackEnd2-bu",
+        "description": "BackEnd2-bu",
+        "peekOfCode": "def data2():\n    data = request.get_json()\n    name = data.get(\"name\", \"No Name Provided\")\n    return jsonify({\"message\": f\"Hello, {name}! - Route 2\"})\n@flask_app.route(\"/data3\", methods=['GET'])\ndef data3():\n    return jsonify({\"message\": \"Data from backend - Route 3\"})\n@flask_app.route(\"/data4\", methods=['POST'])\ndef data4():\n    data = request.get_json()",
+        "detail": "BackEnd2-bu",
+        "documentation": {}
+    },
+    {
+        "label": "data3",
+        "kind": 2,
+        "importPath": "BackEnd2-bu",
+        "description": "BackEnd2-bu",
+        "peekOfCode": "def data3():\n    return jsonify({\"message\": \"Data from backend - Route 3\"})\n@flask_app.route(\"/data4\", methods=['POST'])\ndef data4():\n    data = request.get_json()\n    number = data.get(\"number\", \"No Number Provided\")\n    return jsonify({\"message\": f\"Your Number is: {number}! - Route 4\"})\nif __name__ == \"__main__\":\n    flask_app.run(host=\"0.0.0.0\", port=8082, debug=True) # Expose to all interfaces for Docker",
+        "detail": "BackEnd2-bu",
+        "documentation": {}
+    },
+    {
+        "label": "data4",
+        "kind": 2,
+        "importPath": "BackEnd2-bu",
+        "description": "BackEnd2-bu",
+        "peekOfCode": "def data4():\n    data = request.get_json()\n    number = data.get(\"number\", \"No Number Provided\")\n    return jsonify({\"message\": f\"Your Number is: {number}! - Route 4\"})\nif __name__ == \"__main__\":\n    flask_app.run(host=\"0.0.0.0\", port=8082, debug=True) # Expose to all interfaces for Docker",
+        "detail": "BackEnd2-bu",
+        "documentation": {}
+    },
+    {
+        "label": "flask_app",
+        "kind": 5,
+        "importPath": "BackEnd2-bu",
+        "description": "BackEnd2-bu",
+        "peekOfCode": "flask_app = Flask(__name__)\nCORS(flask_app)  # Enable CORS for all routes\n@flask_app.route(\"/data1\", methods=['GET'])\ndef data1():\n    return jsonify({\"message\": \"Data from backend - Route 1\"})\n@flask_app.route(\"/data2\", methods=['POST'])\ndef data2():\n    data = request.get_json()\n    name = data.get(\"name\", \"No Name Provided\")\n    return jsonify({\"message\": f\"Hello, {name}! - Route 2\"})",
+        "detail": "BackEnd2-bu",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "FrontEnd",
+        "description": "FrontEnd",
+        "peekOfCode": "def main():\n    ui.label('Welcome to my NiceGUI application').classes(\n        'text-h3 text-center')\n    with ui.row().classes('w-full justify-center'):\n        ui.button('Click me!', on_click=lambda: ui.notify('Button clicked!'))\nif __name__ in {\"__main__\", \"__mp_main__\"}:\n    main()\n    ui.run(title='My Application', port=8082)",
+        "detail": "FrontEnd",
+        "documentation": {}
+    }
+]
