@@ -1,18 +1,58 @@
 [
     {
-        "label": "ui",
-        "importPath": "nicegui",
-        "description": "nicegui",
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
         "isExtraImport": true,
-        "detail": "nicegui",
+        "detail": "taipy.gui",
         "documentation": {}
     },
     {
-        "label": "ui",
-        "importPath": "nicegui",
-        "description": "nicegui",
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
         "isExtraImport": true,
-        "detail": "nicegui",
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "notify",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
+        "documentation": {}
+    },
+    {
+        "label": "Gui",
+        "importPath": "taipy.gui",
+        "description": "taipy.gui",
+        "isExtraImport": true,
+        "detail": "taipy.gui",
         "documentation": {}
     },
     {
@@ -122,43 +162,55 @@
         "documentation": {}
     },
     {
-        "label": "Gui",
-        "importPath": "taipy.gui",
-        "description": "taipy.gui",
+        "label": "ui",
+        "importPath": "nicegui",
+        "description": "nicegui",
         "isExtraImport": true,
-        "detail": "taipy.gui",
+        "detail": "nicegui",
         "documentation": {}
     },
     {
-        "label": "State",
-        "importPath": "taipy.gui",
-        "description": "taipy.gui",
-        "isExtraImport": true,
-        "detail": "taipy.gui",
-        "documentation": {}
-    },
-    {
-        "label": "notify",
-        "importPath": "taipy.gui",
-        "description": "taipy.gui",
-        "isExtraImport": true,
-        "detail": "taipy.gui",
-        "documentation": {}
-    },
-    {
-        "label": "Gui",
-        "importPath": "taipy.gui",
-        "description": "taipy.gui",
-        "isExtraImport": true,
-        "detail": "taipy.gui",
-        "documentation": {}
-    },
-    {
-        "label": "main",
+        "label": "submit_form",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def main():\n    ui.label('Welcome to my NiceGUI application').classes(\n        'text-h3 text-center')\n    with ui.row().classes('w-full justify-center'):\n        ui.button('Click me!', on_click=lambda: ui.notify('Button clicked!'))\nif __name__ in {\"__main__\", \"__mp_main__\"}:\n    main()\n    ui.run(title='My Application', port=8082)",
+        "peekOfCode": "def submit_form(state):\n    print(f\"Name: {state.name}, Email: {state.email}\")\n# Initialize state variables\nname = \"\"\nemail = \"\"\n# Create page content using Taipy's markdown syntax\npage = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "name = \"\"\nemail = \"\"\n# Create page content using Taipy's markdown syntax\npage = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Create and run the GUI",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "email = \"\"\n# Create page content using Taipy's markdown syntax\npage = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Create and run the GUI\ngui = Gui(page)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "page = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Create and run the GUI\ngui = Gui(page)\nif __name__ == \"__main__\":\n    gui.run(title='Simple Form', port=8086)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "gui",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "gui = Gui(page)\nif __name__ == \"__main__\":\n    gui.run(title='Simple Form', port=8086)",
         "detail": "app",
         "documentation": {}
     },
@@ -338,8 +390,224 @@
         "kind": 2,
         "importPath": "FrontEnd",
         "description": "FrontEnd",
-        "peekOfCode": "def main():\n    ui.label('Welcome to my NiceGUI application').classes(\n        'text-h3 text-center')\n    with ui.row().classes('w-full justify-center'):\n        ui.button('Click me!', on_click=lambda: ui.notify('Button clicked!'))\nif __name__ in {\"__main__\", \"__mp_main__\"}:\n    main()\n    ui.run(title='My Application', port=8082)",
+        "peekOfCode": "def main():\n    ui.label('Welcome to my NiceGUI application').classes(\n        'text-h3 text-center')\n    with ui.row().classes('w-full justify-center'):\n        ui.button('Click me!', on_click=lambda: ui.notify('Button clicked!'))\nif __name__ in {\"__main__\", \"__mp_main__\"}:\n    main()\n    ui.run(title='My Application', port=8080)",
         "detail": "FrontEnd",
+        "documentation": {}
+    },
+    {
+        "label": "submit_form",
+        "kind": 2,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "def submit_form(state):\n    print(f\"Name: {state.name}, Email: {state.email}\")\ndef on_page_change(state, action, page):\n    state.navigate(page)\n# Initialize state variables\nname = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "on_page_change",
+        "kind": 2,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "def on_page_change(state, action, page):\n    state.navigate(page)\n# Initialize state variables\nname = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "name = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "email = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "pages_list",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "pages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "current_page",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "current_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation\nnav_template = \"\"\"",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "form_template",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "form_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation\nnav_template = \"\"\"\n<|{current_page}|selector|values={pages_list}|on_change=on_page_change|>\n\"\"\"",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "nav_template",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "nav_template = \"\"\"\n<|{current_page}|selector|values={pages_list}|on_change=on_page_change|>\n\"\"\"\n# Define multiple pages\npage1 = \"\"\"\n# Page 1\n\"\"\" + nav_template + form_template\npage2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "page1",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "page1 = \"\"\"\n# Page 1\n\"\"\" + nav_template + form_template\npage2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template\n# Create pages dictionary\npages = {\n    \"/\": page1,\n    \"page1\": page1,",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "page2",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "page2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template\n# Create pages dictionary\npages = {\n    \"/\": page1,\n    \"page1\": page1,\n    \"page2\": page2\n}\n# Create and run the GUI",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "pages",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "pages = {\n    \"/\": page1,\n    \"page1\": page1,\n    \"page2\": page2\n}\n# Create and run the GUI\ngui = Gui(pages=pages)\nif __name__ == \"__main__\":\n    gui.run(title=\"Multi-Page App\", port=8088)",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "gui",
+        "kind": 5,
+        "importPath": "multipage-BU",
+        "description": "multipage-BU",
+        "peekOfCode": "gui = Gui(pages=pages)\nif __name__ == \"__main__\":\n    gui.run(title=\"Multi-Page App\", port=8088)",
+        "detail": "multipage-BU",
+        "documentation": {}
+    },
+    {
+        "label": "submit_form",
+        "kind": 2,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "def submit_form(state):\n    print(f\"Name: {state.name}, Email: {state.email}\")\ndef on_page_change(state, action, page):\n    state.navigate(page)\n# Initialize state variables\nname = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "on_page_change",
+        "kind": 2,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "def on_page_change(state, action, page):\n    state.navigate(page)\n# Initialize state variables\nname = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "name = \"\"\nemail = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "email = \"\"\npages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "pages_list",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "pages_list = [\"page1\", \"page2\"]\ncurrent_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "current_page",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "current_page = \"page1\"\n# Create page content using Taipy's markdown syntax\nform_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation\nnav_template = \"\"\"",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "form_template",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "form_template = \"\"\"\n# Enter your details below\n<|{name}|input|label=Name|>\n<|{email}|input|label=Email|>\n<|Submit|button|on_click=submit_form|>\n\"\"\"\n# Add dropdown navigation\nnav_template = \"\"\"\n<|{current_page}|selector|values={pages_list}|on_change=on_page_change|>\n\"\"\"",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "nav_template",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "nav_template = \"\"\"\n<|{current_page}|selector|values={pages_list}|on_change=on_page_change|>\n\"\"\"\n# Define multiple pages\npage1 = \"\"\"\n# Page 1\n\"\"\" + nav_template + form_template\npage2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "page1",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "page1 = \"\"\"\n# Page 1\n\"\"\" + nav_template + form_template\npage2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template\n# Create pages dictionary\npages = {\n    \"/\": page1,\n    \"page1\": page1,",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "page2",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "page2 = \"\"\"\n# Page 2\n\"\"\" + nav_template + form_template\n# Create pages dictionary\npages = {\n    \"/\": page1,\n    \"page1\": page1,\n    \"page2\": page2\n}\n# Create and run the GUI",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "pages",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "pages = {\n    \"/\": page1,\n    \"page1\": page1,\n    \"page2\": page2\n}\n# Create and run the GUI\ngui = Gui(pages=pages)\nif __name__ == \"__main__\":\n    gui.run(title=\"Multi-Page App\", port=8088)",
+        "detail": "multipage",
+        "documentation": {}
+    },
+    {
+        "label": "gui",
+        "kind": 5,
+        "importPath": "multipage",
+        "description": "multipage",
+        "peekOfCode": "gui = Gui(pages=pages)\nif __name__ == \"__main__\":\n    gui.run(title=\"Multi-Page App\", port=8088)",
+        "detail": "multipage",
         "documentation": {}
     }
 ]
